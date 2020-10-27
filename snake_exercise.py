@@ -15,7 +15,7 @@ Usual snake requirements
 
 if the snake touches itself, the game is over
 the map/field is circular: leaving the field from the right
-c
+
 to end the game, hit ctrl+c
 
 ncurses is a library that talks to the terminal window for you.
@@ -33,6 +33,10 @@ mean something and the others don't. see icons for that.
 class Field:
     def __init__(self, size):
         self.size = size
+        # # represents a part of the body
+        # @ represents the head of the snake.
+        # . represents a point on the screen.
+        # * represents a food item that the snake should eat.
         self.icons = {
             0: ' . ',
             1: ' * ',
@@ -64,7 +68,7 @@ class Field:
             returns an array of len 2 representing the 2d position of the food.
         """
         pass
-    def _create_field():
+    def _create_field(self):
         """
             just set up the array for the whole
         """
@@ -95,16 +99,17 @@ class Snake:
         """
         pass
 
-    def move():
+    def move(self):
         """
             recalculate the position of the snake based on 1 "tick" of movement.
         """
         pass
 
-    def grow():
+    def grow(self):
         """
             this function is responsible for growing the snake by 1.
         """
+        pass
 
     def _within_bounds(self):
         """
